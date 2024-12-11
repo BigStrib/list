@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSD Card Specifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 90%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0078d7;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MicroSD Card Specifications</h1>
+    </header>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Manufacturer / Brand</th>
+                    <th>Model / Specification</th>
+                    <th>Reported Capacities</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Integral</td>
+                    <td>Ultima PRO UHS-I (U3) A1 V30</td>
+                    <td>64GB, 128GB, 256GB, 512GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Kingston</td>
+                    <td>Canvas Select Plus UHS-I (U3) A1 V30</td>
+                    <td>512GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Kingston</td>
+                    <td>Canvas Go Plus UHS-I (U3) A2 V30</td>
+                    <td>256GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Lexar</td>
+                    <td>High Performance 633x UHS-I (U3) A2 V30</td>
+                    <td>512GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Lexar</td>
+                    <td>Professional 1066x UHS-I (U3) A2</td>
+                    <td>128GB, 256GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>MyMemory</td>
+                    <td>Premium PRO UHS-I (U3) A1 V30</td>
+                    <td>512GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Patriot</td>
+                    <td>LX Series UHS-I (U1)</td>
+                    <td>128GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PNY</td>
+                    <td>Elite P-SDU128U185EL UHS-I (U1)</td>
+                    <td>128GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Samsung</td>
+                    <td>EVO UHS-I (U1)</td>
+                    <td>64GB, 128GB, 256GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Samsung</td>
+                    <td>EVO Select (Green) UHS-I (U3)</td>
+                    <td>512GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Samsung</td>
+                    <td>EVO Select (Blue) UHS-I (U3) A2 V30</td>
+                    <td>128GB, 256GB, 512GB</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Samsung</td>
+                    <td>PRO Plus (Purple) UHS-I (U3) A2 V30</td>
+                    <td>128GB</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MicroSD Specifications. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
