@@ -7,158 +7,142 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color:  #333;  /* Dark background for a professional look */
-  color: #f4f4f4;  /* Lighter text color for contrast */
-  text-align: left;
+  background-color: #2e2e2e; /* Softer dark gray for background */
+  color: #f4f4f4; /* Light text for readability */
   line-height: 1.6;
+  padding: 20px;
 }
 
 /* Header Styling */
 header {
-  background-color:#444;  /* Professional red tone for header */
-  color: #e63946;
-  padding: 15px 0;
+  background-color: #b23a48; /* Rich red for header */
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 1em;
+header h1 {
+  font-size: 2rem;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-p {
-  font-size: 1.1em;
-  margin-top: 5px;
-  font-weight: 400;
+/* Container for Items */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  justify-content: center;
 }
 
+/* Individual Item Card */
 .item {
-  position: relative;
-  width: 220px;  /* Increased width for more spacious items */
-  height: 240px; /* Increased height for more spacious items */
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
-  overflow: hidden;
-  background-color: #fff;
+  flex: 1 1 calc(50% - 20px); /* Two items per row */
+  max-width: calc(50% - 20px);
+  background-color: #fff; /* Clean white for card background */
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 100%; /* One item per row on smaller screens */
+    max-width: 100%;
+  }
 }
 
 .item img {
   width: 100%;
-  height: 160px;  /* Adjusted image height */
+  height: 160px;
   object-fit: cover;
-  border-radius: 12px 12px 0 0; /* Rounded corners for the image */
-  transition: opacity 0.3s ease-in-out;
+  border-radius: 12px 12px 0 0;
 }
 
 .item p {
-  font-size: 1.1em;
-  color: #e63946;  /* Accent red for text */
-  font-weight: 600;
-  margin-top: 15px;
-  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: #b23a48; /* Accent red for text */
+  font-weight: bold;
+  padding: 15px 10px;
+  text-transform: capitalize;
   letter-spacing: 1px;
-  transition: color 0.3s ease-in-out;
 }
 
 .item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Subtle hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.item:hover img {
-  opacity: 0.8;
-}
-
-.item:hover p {
-  color: #000;
-}
-
-/* Rollover Effects */
-.item a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.item a:active {
-  color: #ffcc00;
-}
-
-/* Description Section Styling */
+/* Description Section */
 .desc {
-  background-color: #333;  /* Dark grey background for description section */
-  color: #fff;
+  background-color: #444; /* Slightly lighter than body background */
+  color: #f4f4f4;
   border-radius: 12px;
-  margin-top: 40px;
+  padding: 20px;
+  margin-top: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .desc-item {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: #444;
+  background-color: #555; /* Neutral darker background */
   border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .desc-item:hover {
-  transform: scale(1.02);
-  background-color: #555;
+  transform: translateY(-5px);
+  background-color: #666;
 }
 
 .desc-item .desc-image {
-  width: 140px;  /* Slightly larger image */
-  height: 140px;
+  width: 120px;
+  height: 120px;
   margin-right: 20px;
   border-radius: 10px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+}
+
+.desc-item .desc-text {
+  flex: 1;
 }
 
 .desc-item .desc-text h3 {
-  font-size: 1.6em;
-  color: #e63946;  /* Accent red for title */
+  font-size: 1.5rem;
+  color: #b23a48; /* Red for titles */
   margin-bottom: 10px;
-  font-weight: 700;
-  text-transform: capitalize;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Professional shadow */
 }
 
+
 .desc-item .desc-text p {
-  font-size: 1.1em;
+  font-size: 1rem;
+  color: #ccc; /* Light gray for description text */
   line-height: 1.8;
-  color: #ccc;
-  font-weight: 400;
 }
 
 .desc-item .desc-text a {
-  display: inline-block; /* Ensure proper button alignment */
-  margin: 10px 5px 0; /* Add spacing above and between buttons */
-  text-decoration: none; /* Removes underline */
-  color: #e63946; /* Default link color */
-  font-size: 18px; /* Set font size */
-  padding: 5px 10px; /* Add padding */
-  border: 1px solid #e63946; /* Add border */
-  border-radius: 5px; /* Rounded corners */
-  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #b23a48; /* Red for buttons */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .desc-item .desc-text a:hover {
-  background-color: #e63946; /* Change background on hover */
-  color: white; /* Change text color on hover */
-  border-color: #e63946; /* Change border color */
-}
-
-.desc-item .desc-text a:active {
-  background-color: #555;
-  color: white;
-}
-
-/* Hover effect for the description images */
-.desc-item:hover .desc-image {
-  transform: scale(1.1);
+  background-color: #8e2d38; /* Darker red on hover */
+  transform: scale(1.05);
 }
