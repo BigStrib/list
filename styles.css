@@ -106,8 +106,8 @@ header h1 {
 }
 
 .desc-item .desc-image {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   margin-right: 20px;
   border-radius: 10px;
   object-fit: cover;
