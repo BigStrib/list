@@ -17,17 +17,19 @@ body {
 header {
   background-color: #b23a48; /* Rich red for header */
   color: #fff;
-  padding: 20px 0;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
+  border-radius: 20px; 
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  height:60px;
+  padding-top:10px;
 }
 
 /* Container for Items */
@@ -117,7 +119,7 @@ header h1 {
 
 .desc-item .desc-text h3 {
   font-size: 1.5rem;
-  color: #b23a48; /* Red for titles */
+  color:#f4f4f4; /* Red for titles */
   margin-bottom: 10px;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Professional shadow */
