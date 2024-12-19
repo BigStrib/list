@@ -29,12 +29,12 @@ header h1 {
 
 /* Container for Cards */
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamically adjust columns */
-  gap: 20px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Consistent gap */
+  justify-content: center; /* Center align items */
   margin: 0 auto;
-  max-width: 1400px; /* Wider container for larger screens */
+  max-width: 1200px; /* Limit the container width */
   padding: 10px;
 }
 
@@ -46,12 +46,12 @@ header h1 {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 100%;
-  max-width: 300px;
+  width: 300px; /* Fixed width for all items */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Add filter transition */
+
 }
 
 .item img {
@@ -69,6 +69,7 @@ header h1 {
   font-size: 1rem;
   padding: 10px;
   flex-grow: 1;
+ 
 }
 
 .item a {
@@ -80,41 +81,38 @@ header h1 {
   text-decoration: none;
   border-radius: 5px;
   font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item a:hover {
   background-color: #8e2d38;
+  transform: scale(1.05); /* Subtle scale effect on hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
 
 .item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.05) rotate(2deg); /* Increase scale and subtle rotation */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for more depth */
+  filter: brightness(1.1); /* Slightly brighten the card */
 }
+
 
 /* Responsive Design */
 
 /* For larger desktops */
 @media (min-width: 1400px) {
   .container {
-    gap: 30px; /* More spacing for larger screens */
+    max-width: 1200px; /* Keep a consistent layout width */
+    padding: 20px;
   }
 
   header h1 {
     font-size: 3rem; /* Bigger header for large screens */
   }
-
-  .item {
-    max-width: 350px; /* Slightly larger cards */
-  }
 }
 
 /* For desktops and tablets (1024px - 1400px) */
 @media (max-width: 1400px) and (min-width: 1024px) {
-  .container {
-    gap: 25px;
-  }
-
   header h1 {
     font-size: 2.2rem;
   }
@@ -132,6 +130,8 @@ header h1 {
 
   .container {
     padding: 10px 15px;
+    justify-content: center; /* Ensure items stay centered */
+    gap: 20px; /* Ensure gap consistency */
   }
 
   .item img {
@@ -154,12 +154,12 @@ header h1 {
   }
 
   .container {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Slightly smaller cards */
-    gap: 15px;
+    justify-content: center; /* Center items on smaller screens */
+    gap: 20px; /* Ensure gap consistency */
   }
 
   .item {
-    max-width: 260px;
+    width: 240px; /* Fixed width for smaller items */
   }
 
   .item img {
@@ -183,12 +183,13 @@ header h1 {
   }
 
   .container {
-    grid-template-columns: 1fr; /* One card per row */
-    gap: 10px;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Ensure single items are centered */
+    gap: 20px; /* Ensure gap consistency */
   }
 
   .item {
-    max-width: 100%;
+    width: 300px; /* Fixed width even on small screens */
   }
 
   .item img {
@@ -202,5 +203,20 @@ header h1 {
   .item a {
     font-size: 0.8rem;
     padding: 6px 10px;
+  }
+}
+
+/* Additional fine-tuning for edge cases */
+@media (min-width: 600px) and (max-width: 700px) {
+  .container {
+    gap: 20px; /* Fine-tune spacing */
+    justify-content: center;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  .container {
+    gap: 20px; /* Fine-tune spacing */
+    justify-content: center;
   }
 }
